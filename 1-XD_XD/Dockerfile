@@ -67,9 +67,7 @@ COPY keras.json /root/.keras/
 # Deploy OSMdata
 RUN mkdir /root/osmdata
 COPY osmdata /root/osmdata/
-RUN unzip /root/osmdata/las-vegas_nevada.imposm-shapefiles.zip \
-        -d /root/osmdata/las-vegas_nevada_osm/ &&\
-    unzip /root/osmdata/shanghai_china.imposm-shapefiles.zip \
+RUN unzip /root/osmdata/shanghai_china.imposm-shapefiles.zip \
         -d /root/osmdata/shanghai_china_osm/ &&\
     unzip /root/osmdata/paris_france.imposm-shapefiles.zip \
         -d /root/osmdata/paris_france_osm/ &&\
